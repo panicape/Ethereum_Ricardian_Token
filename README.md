@@ -33,6 +33,8 @@ A Ricardian contract is a document which is legible to both a court of law and t
 
 The documents known as Ricardian contracts are the essential method to describe "value" in financial cryptography. The Ricardian contract is both a document that presents a form for a legal contract, and a design pattern to incorporate that document securely into an accounting system. When used properly, they are pervasive, being found in some sense from the client GUI layer down to the secure Internet protocol level. *Ricardian contracts http://www.webfunds.org/guide/ricardian.html*
 
+![Ricardian Contract](http://www.webfunds.org/images/RC-bow-tie.png)
+
 The Ricardian contract is a method of recording a document as a contract at law, and linking it securely to other systems such as accounting for the contract as an issuance of value. It is robust through use of identification by Cryptographic hash function, transparent through use of readable text for legal prose and efficient through markup language to extract essential information.  
 
 In the simplest possible terms, a Ricardian Contract is a formatted document that is both human readable and program parsable. It identifies a Legal Issuer and an Issuance Server, and includes (OpenPGP) keys for those parties. The document is signed in (OpenPGP) cleartext form by the Legal Issuer's contract signing key. A unique identifier is formed by a canonical message digest (hash) which provides an unforgeable link to the accounting system. *Sistemics, The Ricardian Financial Instrument Contract http://www.systemics.com/docs/ricardo/issuer/contract.html*
