@@ -22,6 +22,8 @@ A Smart Contract has to be:
 * Credit Coin is a contract backed by promises of future productivity, and in that sense, is no different than conventional bank credit, time-dollars or LETS systems. *DIGITAL COIN IN BRIEF, by Paul Grignon, 2009*
 * ..., it is apparent that the buyer who issued the monetary instrument to the seller has made a commitment to the community that he, in his turn, will engage in business, i.e., will bid for money by offering his own goods and services in the open market. *FLIGHT FROM INFLATION, The Monetary Alternative, by E.C. Riegel, 2003*
 
+![selfcredit](https://cloud.githubusercontent.com/assets/6016780/25551242/c1054e3e-2c47-11e7-8d19-46c37df6c93f.png)
+
 Product vouchers are legal contracts with a specific data model *INTERNET-DRAFT Ko Fujimura XML Voucher: Generic Voucher Language https://tools.ietf.org/html/draft-ietf-trade-voucher-lang-07* 
 
 Most of the ethereum ERC20: Token standard (ERC: Token standard 20) tokens rely only on promises just stated at a website. *ERC20: Token standard https://github.com/ethereum/EIPs/issues/20* 
