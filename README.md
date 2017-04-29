@@ -26,6 +26,8 @@ A Smart Contract has to be:
 
 Product vouchers are legal contracts with a specific data model *INTERNET-DRAFT Ko Fujimura XML Voucher: Generic Voucher Language https://tools.ietf.org/html/draft-ietf-trade-voucher-lang-07* 
 
+![merchandise](https://cloud.githubusercontent.com/assets/6016780/25551320/91fef9d6-2c48-11e7-969d-cf482e6d301e.png)
+
 Most of the ethereum ERC20: Token standard (ERC: Token standard 20) tokens rely only on promises just stated at a website. *ERC20: Token standard https://github.com/ethereum/EIPs/issues/20* 
 
 In the end, their value relies only on the trust expressed in the market, and the investment made at the ICO, but have no legal validity. A Ricardian contract based token would bring to reality Thomas Greco, Bernard Leathaer and Paul Grigon dreams that every producer of a good is entitled to issue money as a promise about its production.  
