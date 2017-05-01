@@ -1,3 +1,5 @@
+* **C h a l l e n g e** *
+
 # Ethereum Ricardian Token
 Blockchain based and legally valid currency that is a promise of a real world good
 
