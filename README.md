@@ -51,3 +51,48 @@ The ethereum Standardized Contract APIs for Transferable Fungibles, ERC: Token s
 As regards the semantic part, the swarm protocol allows to bind any ethereum ERC: Token standard 20 token to a human readable and legal valid document through it swarm hash. *Semantics, Blockchains and Ricardian Contracts https://www.slideshare.net/christopherbrewster/semantics-blockchains-and-ricardian-contracts*
 
 Its the intersection of the two components that can create a blockchain based and legally valid currency that is a promise of a real world good. *On the intersection of Ricardian and Smart Contracts http://iang.org/papers/intersection_ricardian_smart.html*  
+
+# Implementation
+## Conformance to the ethereum ERC20 Token standard
+**function** totalSupply() constant returns (uint256 totalSupply)  
+**function** balanceOf(address _owner) constant returns (uint256 balance)  
+**function** transfer(address _to, uint256 _value) returns (bool success)  
+**function** transferFrom(address _from, address _to, uint256 _value) returns (bool success)  
+**function** approve(address _spender, uint256 _value) returns (bool success)  
+**function** allowance(address _owner, address _spender) constant returns (uint256 remaining)  
+**event** Transfer(address indexed _from, address indexed _to, uint256 _value)  
+**event** Approval(address indexed _owner, address indexed _spender, uint256 _value)  
+## Conformance to the Ricardian contract
+### Association and Producers fields
+string **_brandname**; 		// the name you are normally known by in the street  
+string **_shortname**; 		// short name is displayed by trading software, 8 chars  
+string **_longname**; 		// full legal name  
+string **_address**; 		// formal address for snail-mail notices  
+string **_country**; 		// two letter ISO code that indicates the jurisdiction  
+string **_registration**; 	// legal registration code of the legal person or legal entity   
+address **_registryBzz**; 	// swarm hash of the signer human readable registry document  
+### Token fields
+uint256 **totalSupply**;  
+string **voucherTokenName**;  
+uint8 **decimals**;  
+string **voucherTokenSymbol**;  
+address **voucherTokenLogoBzz**;  		// swarm hash of the voucher icon or logo  
+uint8 **validity_start**; 				// start date of the contract. Validity period of the voucher to redeem merchandises  
+uint8 **validity_end**; 					// end date of the contract. Provides restrictions on the validity period of the voucher  
+### Contract fields
+address **contractBzz**; 	// swarm hash of the signer human readable contract  
+string[] **merchandises**; 	// Provides restrictions on the object to be claimed   
+string[] **definitions**; 	// Includes terms and definitions to be defined in a contract  
+string[] **conditions**; 	// Provides any other applicable restrictions  
+## Functioning
+* There is an **Association** grouping the **Producers**, and issuing the voucher **tokens**. It also writes and signs the legal **contract**, defining the **merchandises** or goods, the **definitions** and the **conditions**
+* The Association issues a value **V** of voucher tokens, valid for a period **M** of months. It holds it in the association wallet
+* The Association accepts or rejects membership applications of Producers 
+* Each Producer makes **promises** of production and sells of value **p** for month **m**
+* The Association approves, or not, the promise. It will consider the capacity of the producer to conform to the quality parameters of the contract. Authorises the producer to **withdraw** tokens for value **p** to their wallet
+* Sales consist in transferring tokens for value **s**, selling the price, from the buyer to the association wallet, redeeming the voucher. Deduct **s** to the promises **p** of the producer for that month **m**
+* Any month **m**, the association adds the net remaining promise **p** (positive or negative) of each producer at any previous month **m-x** to the promise of month **m**
+* At approving a new promise of a producer for a future month **m**, the association may consider decrease the requested promise in view of a prexisting promise or a carry over promisering **voucherTokenSymbol**;  
+* Sales consist in transferring tokens for value **s**, selling the price, from the buyer to the association wallet, redeeming the voucher. Deduct **s** to the promises **p** of the producer for that month **m**
+* Any month **m**, the association adds the net remaining promise **p** (positive or negative) of each producer at any previous month **m-x** to the promise of month **m**
+* At approving a new promise of a producer for a future month **m**, the association may consider decrease the requested promise in view of a prexisting promise or a carry over promise
